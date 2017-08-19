@@ -1,0 +1,20 @@
+{
+	"data": [{
+		"id": "599892835bef592de237edf5",
+		"analysis": [
+			{
+				"provider": "speech_to_sentiment",
+				"id": "599892885bef592de237edf6",
+				"result": {
+					"simplified": "neutral",
+					"score": 0.1000000015,
+					"magnitude": 0.1000000015
+				}
+			}
+		],
+		"file_hash": "abaee1bbe3b24117657bf9e8081d7ac2"
+    }],
+    "count" : 1,
+	"success": true,
+	"messages": []
+}

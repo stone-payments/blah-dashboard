@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './blah.png';
 import './App.css';
-import Box from './Box.js'
+import UsersData from './UsersData.js'
 
 class App extends Component {
   render() {
@@ -12,7 +12,11 @@ class App extends Component {
           <h2>blah</h2>
         </div>
         <p className="App-intro">
-          <Box/>
+          <UsersData emotion="very positive" />
+          <UsersData emotion="positive" />
+          <UsersData emotion="neutral" />
+          <UsersData emotion="negative" />
+          <UsersData emotion="very negative" />
         </p>
       </div>
     );
