@@ -1,0 +1,13 @@
+.Emotions {
+    display: inline-block;
+    width: 17%;
+}
+
+.Emotions img {
+    animation: Emotions-spin infinite 20s linear;
+}
+
+@keyframes Emotions-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+}
