@@ -19,7 +19,6 @@ class App extends Component {
           <Emotions emotion="positive" />
           <Emotions emotion="very positive" />
         </p>
-        <Query />
       </div>
     );
   }

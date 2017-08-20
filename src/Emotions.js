@@ -15,7 +15,7 @@ class Emotions extends Component {
   render() {
     var phrase = "";
     if (this.state.count !== undefined) {
-      phrase = `${this.state.count} ${this.props.emotion} emotions in the last hour`
+      phrase = `${this.state.count} ${this.props.emotion} emotions`
     }
     var img = "";
     if (this.props.emotion === 'very negative') {
