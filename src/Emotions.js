@@ -14,23 +14,23 @@ class Emotions extends Component {
   }
   render() {
     var phrase = "";
-    if (this.state.count) {
+    if (this.state.count !== undefined) {
       phrase = `${this.state.count} ${this.props.emotion} emotions in the last hour`
     }
     var img = "";
-    if (this.props.emotion == 'very negative') {
+    if (this.props.emotion === 'very negative') {
       img = <img src={very_negative} />
     }
-    if (this.props.emotion == 'negative') {
+    if (this.props.emotion === 'negative') {
       img = <img src={negative} />
     }
-    if (this.props.emotion == 'neutral') {
+    if (this.props.emotion === 'neutral') {
       img = <img src={neutral} />
     }
-    if (this.props.emotion == 'positive') {
+    if (this.props.emotion === 'positive') {
       img = <img src={positive} />
     }
-    if (this.props.emotion == 'very positive') {
+    if (this.props.emotion === 'very positive') {
       img = <img src={very_positive} />
     }
     
@@ -43,13 +43,21 @@ class Emotions extends Component {
   }
   _getCalls(emotion) {
     var that = this;
-    fetch('mock.json').then(function success(response) {
+    fetch('http://localhost:5000/search', { method : 'POST' }).then(function success(response) {
+      console.log(response)
       return response.json();
     }, function error(response) {
       console.log(response);
     }).then(function load_json_into_state(response){
+      var c = 0;
+      response['data'].forEach(function(d){
+        var analysis = d['analysis'][0]
+        if (analysis !== undefined && analysis['result']['simplified'] == that.props.emotion) {
+          c += 1;
+        }
+      });
       that.setState({
-        count: response['count']
+        count: c
       });
     });
   }
