@@ -52,7 +52,7 @@ class Emotions extends Component {
       var c = 0;
       response['data'].forEach(function(d){
         var analysis = d['analysis'][0]
-        if (analysis !== undefined && analysis['result']['simplified'] == that.props.emotion) {
+        if (analysis !== undefined && analysis['result']['simplified'] === that.props.emotion) {
           c += 1;
         }
       });

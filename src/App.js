@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './img/blah.png';
 import './App.css';
 import Emotions from './Emotions.js'
-import Query from './Query.js'
+import LastCall from './LastCall.js'
 
 class App extends Component {
   render() {
@@ -18,6 +18,7 @@ class App extends Component {
           <Emotions emotion="neutral" />
           <Emotions emotion="positive" />
           <Emotions emotion="very positive" />
+          <LastCall />
         </p>
       </div>
     );
