@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './img/blah.png';
 import './App.css';
 import Emotions from './Emotions.js'
+import Query from './Query.js'
 
 class App extends Component {
   render() {
@@ -11,13 +12,14 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>blah</h2>
         </div>
-        <p className="App-intro">
+        <p className="Emotions-container">
           <Emotions emotion="very negative" />
           <Emotions emotion="negative" />
           <Emotions emotion="neutral" />
           <Emotions emotion="positive" />
           <Emotions emotion="very positive" />
         </p>
+        <Query />
       </div>
     );
   }
