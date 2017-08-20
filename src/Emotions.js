@@ -43,7 +43,7 @@ class Emotions extends Component {
   }
   _getCalls(emotion) {
     var that = this;
-    fetch('http://localhost:5000/search', { method : 'POST' }).then(function success(response) {
+    fetch('http://13.82.184.181:5000/search', { method : 'POST' }).then(function success(response) {
       console.log(response)
       return response.json();
     }, function error(response) {
