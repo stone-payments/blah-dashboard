@@ -14,11 +14,13 @@ class LastCall extends Component {
     }
     return (
         <div>
-            <h2>(11)4933-0241</h2>
-        </div>
-        <div>
-            <h2>Last Call</h2>
-            <pre>{JSON.stringify(call, null, 2) }</pre>
+          <div>
+              <h2>(11)4933-0241</h2>
+          </div>
+          <div>
+              <h2>Last Call</h2>
+              <pre>{JSON.stringify(call, null, 2) }</pre>
+          </div>
         </div>
     );
   }
